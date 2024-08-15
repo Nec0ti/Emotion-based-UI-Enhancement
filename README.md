@@ -35,7 +35,9 @@ This project is a web application that dynamically adjusts the background color 
     
     Copy code
     
-    `<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>` & `<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>`
+   `<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>`
+   &
+   `<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>`
         
 
 ## Usage
