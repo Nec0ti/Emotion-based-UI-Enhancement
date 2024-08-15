@@ -102,16 +102,16 @@ function updateBackgroundColor(emotion) {
     let color;
     switch (emotion) {
         case 'happy':
-            color = 'lightgreen';
+            color = 'green';
             break;
         case 'angry':
-            color = 'green';
+            color = 'red';
             break;
         case 'sad':
             color = 'lightblue';
             break;
         default:
-            color = 'white';
+            color = 'black';
             break;
     }
     document.body.style.transition = 'background-color 1s ease';
@@ -152,7 +152,7 @@ function drawFaceMesh(face) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // To draw the face mesh
-    ctx.strokeStyle = 'blue';
+    ctx.strokeStyle = 'black';
     ctx.lineWidth = 2;
 
     // To draw the facial features
@@ -179,7 +179,7 @@ function drawFaceMesh(face) {
     });
 
     // Plotting the coordinates of each point
-    ctx.fillStyle = 'green';
+    ctx.fillStyle = 'blue';
     mesh.forEach(point => {
         const [x, y] = point;
         ctx.beginPath();
