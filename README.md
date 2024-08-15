@@ -1,5 +1,6 @@
 # Emotion-based UI Enhancement
 **THIS PROJECTS MADE FOR *HACKATHON WITH LEWIS 9-16* AUGUST 2024**
+
 This project is a web application that dynamically adjusts the background color and content of the webpage based on the user's facial expressions. The user interface changes according to the detected emotions such as happiness, anger, sadness, and surprise.
 
 ## Features
