@@ -1,12 +1,17 @@
 const video = document.getElementById('video');
+const smallCanvas = document.getElementById('small-canvas');
+const smallCtx = smallCanvas.getContext('2d');
+let width, height;
 
 async function setupCamera() {
-    const stream = await navigator.mediaDevices.getUserMedia({
-        video: true
-    });
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
     video.srcObject = stream;
     await new Promise(resolve => video.onloadedmetadata = resolve);
     video.play();
+    width = video.videoWidth;
+    height = video.videoHeight;
+    smallCanvas.width = 200;
+    smallCanvas.height = 150;
 }
 
 async function analyzeEmotion() {
@@ -20,6 +25,8 @@ async function analyzeEmotion() {
         const emotion = detectEmotion(expressions);
 
         updateBackgroundColor(emotion);
+        drawFaceMesh(prediction);
+        drawSmallCanvas();
     }
 
     requestAnimationFrame(analyzeEmotion);
@@ -51,20 +58,36 @@ function updateBackgroundColor(emotion) {
     switch (emotion) {
         case 'happy':
             color = '#aaffaa';
+            document.body.classList.add('flickering');
+            document.body.classList.remove('waving');
             break;
         case 'angry':
             color = '#ff5555';
+            document.body.classList.remove('flickering');
+            document.body.classList.add('waving');
             break;
         case 'sad':
             color = '#aaaaff';
+            document.body.classList.remove('flickering');
+            document.body.classList.remove('waving');
             break;
         default:
             color = '#ffffff';
+            document.body.classList.remove('flickering');
+            document.body.classList.remove('waving');
     }
 
     document.body.style.backgroundColor = color;
 }
 
+function drawFaceMesh(prediction) {
+    // TODO: Draw the face mesh on the small canvas
+}
+
+function drawSmallCanvas() {
+    smallCtx.drawImage(video, 0, 0, smallCanvas.width, smallCanvas.height);
+}
+
 setupCamera().then(() => {
-    analyzeEmotion(); // START ANALYZING
+    analyzeEmotion(); // Start Analyzing
 });

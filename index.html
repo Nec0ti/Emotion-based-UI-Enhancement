@@ -8,7 +8,7 @@
         body {
             margin: 0;
             overflow: hidden;
-            transition: background-color 2s ease;
+            transition: background-color 2s ease, filter 1s ease;
         }
         #video {
             position: absolute;
@@ -19,10 +19,20 @@
             object-fit: cover;
             opacity: 0;
         }
+        #small-canvas {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 200px;
+            height: 150px;
+            border: 2px solid #000;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
     </style>
 </head>
 <body>
     <video id="video" autoplay></video>
+    <canvas id="small-canvas"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>
     <script src="app.js"></script>
