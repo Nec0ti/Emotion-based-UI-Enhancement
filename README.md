@@ -61,4 +61,4 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any questions or contribution suggestions, please contact <a mailto:halilnecatig2@gmail.com>halilnecatig2@gmail.com</a>.
+For any questions or contribution suggestions, please contact <a mailto:halilnecatig2@gmail.com/>.
