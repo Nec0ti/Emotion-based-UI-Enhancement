@@ -24,7 +24,7 @@ This project is a web application that dynamically adjusts the background color 
     
     Copy code
     
-    `git clone https://github.com/yourusername/emotion-based-ui-enhancement.git cd emotion-based-ui-enhancement`
+    `git clone https://github.com/Nec0ti/Emotion-based-UI-Enhancement.git cd Emotion-based-UI-Enhancement`
     
 2. **Add Required Libraries**
     
@@ -34,22 +34,8 @@ This project is a web application that dynamically adjusts the background color 
     
     Copy code
     
-    `<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>`
-    
-3. **Serve the Project**
-    
-    Use a web server to run the project. For example, with `http-server`:
-    
-    bash
-    
-    Copy code
-    
-    `npx http-server`
-    
-4. **Open in a Web Browser**
-    
-    Access the application by navigating to `localhost:8080` in your web browser.
-    
+    `<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>` & `<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>`
+        
 
 ## Usage
 
@@ -67,7 +53,7 @@ This project is a web application that dynamically adjusts the background color 
 
 ## Contributors
 
-- **Your Name**: Project initiator and main developer
+- **Necoti**: Project initiator and main developer
 
 ## License
 
